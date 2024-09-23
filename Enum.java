@@ -1,22 +1,23 @@
-enum Status{
-    Running, Failed, Pending, Success;
+enum Laptop{
+    Macbook, Windows, Surface, Thinkpad;
+    private int price;
+    private Laptop(){
+        price=1000;
+    }    
+    private Laptop(int price){
+        this.price=price;
+    }
+    public void setPrice(int price){
+        this.price=price;
+    }
+    public int getPrice(){
+        return price;
+    }
 }
 public class Enum {
     public static void main(String[] args) {
-        Status s= Status.Failed;
-        switch (s) {
-            case Success:
-                System.out.println("Done");
-                break;
-            case Failed:
-                System.out.println("Try Again");
-                break;
-            case Running:
-                System.out.println("It is working");
-                break;
-            default:
-                System.out.println("Please wait");
-                break;
+            for(Laptop lap: Laptop.values()){
+                System.out.println(lap+":"+lap.getPrice());
+            }
         }
     }
-}
