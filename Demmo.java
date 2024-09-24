@@ -3,6 +3,11 @@ class A extends Thread{
         for(int i=0; i<100; i++)
         {
             System.out.println("Preetham");
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         } 
     }
 }
@@ -11,6 +16,11 @@ class B extends Thread{
         for(int i=0; i<100; i++)
         {
             System.out.println("Dongari");
+            try {
+                Thread.sleep(10);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         } 
     }
 }
